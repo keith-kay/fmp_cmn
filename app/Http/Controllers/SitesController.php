@@ -18,6 +18,7 @@ class SitesController extends Controller
     }
     public function store(Request  $request)
     {
+        dd($request);
         $request->validate([
             'name'  => 'required|string',
             'status' => 'required|string',
