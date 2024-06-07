@@ -125,22 +125,8 @@
             <!-- Main Content -->
             <form id="mealSelectionForm" action="/selectMeal" method="post">
                 @csrf
-                <div class="row mt-3 mb-4">
+                <div class="row mt-3 mb-4 justify-content-center">
                     <input type="hidden" id="mealTypeIdInput" name="meal_type_id">
-                    <div class="col-md-6 mt-4">
-                        <a href="javascript:void(0);" onclick="selectMeal(1)" style="text-decoration: none;">
-                            <div class="image-div">
-                                <div class="d-flex justify-content-center mx-auto" style="max-width: 300px; max-height: 300px;">
-                                    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-                                    <dotlottie-player src="https://lottie.host/ca9c8ad3-da81-4ead-b80d-1c8fd9d0272f/HJTyTrfTrU.json" background="transparent" speed="1" style="width: 100%; height: auto;" loop autoplay>
-                                    </dotlottie-player>
-                                </div>
-                                <p class="text-center fs-5 mt-3 tea-description" style="color: #153037; margin-bottom: 20px;">
-                                    <strong><u>Tea</u></strong>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
                     <div class="col-md-6 mt-4">
                         <a href="javascript:void(0);" onclick="selectMeal(2)" style="text-decoration: none;">
                             <div class="image-div">

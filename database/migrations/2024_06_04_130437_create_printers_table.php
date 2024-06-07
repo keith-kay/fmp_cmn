@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bsl_cmn_sites', function (Blueprint $table) {
-            $table->increments('bsl_cmn_sites_id');
-            $table->string('bsl_cmn_sites_name');
-            $table->integer('bsl_cmn_sites_status');
-            $table->char('bsl_cmn_sites_device_ip',15)->nullable();
+        Schema::create('printers', function (Blueprint $table) {
+            $table->id();
+            $table->integer('site_id');
+            $table->string("name");
+            $table->string("address");
+            $table->integer("port");
+            $table->integer("status")->default(1);
             $table->timestamps();
         });
     }
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bsl_cmn_sites');
+        Schema::dropIfExists('printers');
     }
 };

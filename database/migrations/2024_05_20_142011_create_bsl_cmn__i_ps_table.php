@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('api_response_logs', function (Blueprint $table) {
-            $table->id();
+       /*  Schema::create('bsl_cmn_IPs', function (Blueprint $table) {
+            $table->bigIncrements('bsl_cmn_IPs_id');
+            $table->string('bsl_cmn_IPs_name');
+            $table->string('bsl_cmn_IPs_address');
             $table->timestamps();
-        });
+        }); */
     }
 
     /**
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('api_response_logs');
+        Schema::dropIfExists('bsl_cmn_IPs');
     }
 };

@@ -1,4 +1,4 @@
-<!DOCTYPE html>b
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -27,6 +27,8 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/css/style.css') }}" rel=" stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     <!-- CSS file for DataTables -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
@@ -102,7 +104,7 @@
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#components-nav">
-                    <i class="bi bi-person"></i><span>Users</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <i class="bi bi-gear"></i><span>Configs</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
@@ -126,8 +128,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ url('roles') }}">
+                        <a href="{{ url('roles')  }}">
                             <i class="bi bi-circle"></i><span>Roles</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('printers') }}">
+                            <i class="bi bi-circle"></i><span>Printers</span>
                         </a>
                     </li>
                 </ul>
@@ -203,7 +210,7 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>Fumba Ports</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>{{ env("ENTITY") }}</span></strong>. All Rights Reserved
         </div>
         <!--  -->
     </footer><!-- End Footer -->
